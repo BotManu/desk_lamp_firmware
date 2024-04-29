@@ -1,10 +1,17 @@
 #include "FastLed_center.h"
 #include "Arduino.h"
 
-FastLed_center::FastLed_center(/* args */)
+bool FastLed_center::init()
 {
+    return false;
 }
 
-FastLed_center::~FastLed_center()
+bool FastLed_center::setColor(unsigned char redColor, unsigned char greenColor, unsigned char blueColor)
 {
+    return false;
+}
+
+bool FastLed_center::setIntensity(unsigned char intensity)
+{
+    return false;
 }

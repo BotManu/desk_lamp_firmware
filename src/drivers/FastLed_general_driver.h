@@ -3,7 +3,7 @@
 #include <FastLED.h>
 
 /*Project Specific includes*/
-#include "DisplayLedInterface.h"
+#include "interface/DisplayLedInterface.h"
 #include "FastLed_center.h"
 #include "FastLed_inner.h"
 #include "FastLed_outer.h"
@@ -12,6 +12,8 @@
 #define LED_PIN 5
 #define COLOR_ORDER GRB
 #define CHIPSET     WS2812B
+#define MAX_BRIGHTNESS 120
+#define BRIGHTNESS_DEFAULT  (unsigned int)(MAX_BRIGHTNESS/2)
 
 class FastLed_general_driver:DisplayLedInterface{
     public:

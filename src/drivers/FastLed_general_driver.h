@@ -4,9 +4,6 @@
 
 /*Project Specific includes*/
 #include "interface/DisplayLedInterface.h"
-#include "FastLed_center.h"
-#include "FastLed_inner.h"
-#include "FastLed_outer.h"
 
 /*Public library defines*/
 #define LED_PIN 5
@@ -23,9 +20,6 @@ class FastLed_general_driver:DisplayLedInterface{
     bool setDisplayIntensity(unsigned char intensity);
 
     /*The three zones*/
-    FastLed_center ZoneCenter;
-    FastLed_inner ZoneInner;
-    FastLed_outer ZoneOuter;
 
     private:
     static const unsigned char NUM_LEDS = 64;
@@ -34,7 +28,7 @@ class FastLed_general_driver:DisplayLedInterface{
     bool setLedColor(int n_led, unsigned char red_color, 
                             unsigned char green_color,
                             unsigned char blue_color);
-
-
+    
+    private:
 
 };

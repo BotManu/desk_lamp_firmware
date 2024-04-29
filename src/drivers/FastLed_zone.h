@@ -1,9 +1,9 @@
 #pragma once
 
-#include "interface/InnerLedZoneInterface.h"
-
-class FastLed_inner: public InnerLedZoneInterface
-{
+class FastLed_center{
+private:
+    unsigned int ledIndexes[16];
+    
 public:
     bool init();
     bool setColor(unsigned char redColor, unsigned char greenColor, unsigned char blueColor);

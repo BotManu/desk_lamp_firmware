@@ -23,7 +23,10 @@ class FastLed_general_driver:DisplayLedInterface{
     bool setCenterIntensity(uint8_t intensity);
 
     bool setInnnerColor(uint8_t rc, uint8_t gc, uint8_t bc);
+    bool setInnerIntensity(uint8_t intensity);
+
     bool setOuterColor(uint8_t rc, uint8_t gc, uint8_t bc);
+    bool setOuterIntensity(uint8_t intensity);
 
     private:
     static const unsigned char NUM_LEDS = 64;
@@ -33,10 +36,5 @@ class FastLed_general_driver:DisplayLedInterface{
     FastLed_zone *FastLed_center;
     FastLed_zone *FastLed_inner;
     FastLed_zone *FastLed_outer;
-
-    bool setLedColor(int n_led, unsigned char red_color, 
-                            unsigned char green_color,
-                            unsigned char blue_color);
-    
 
 };

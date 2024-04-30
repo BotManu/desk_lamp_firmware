@@ -7,6 +7,8 @@ void setup()
 {
   LedDisplay.init();
   LedDisplay.setCenterColor(200, 0, 0);
+  LedDisplay.setInnnerColor(0, 0, 200);
+  LedDisplay.setOuterColor(0, 200, 0);
 }
 
 static uint8_t i = 0;

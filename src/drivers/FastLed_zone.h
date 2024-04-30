@@ -1,11 +1,22 @@
 #pragma once
+#include "FastLED.h"
 
-class FastLed_center{
+class FastLed_zone{
 private:
-    unsigned int ledIndexes[16];
+    static const int N_LEDS = 64;
+
+    //current color of the zone
+    CRGB zoneColor;
+    
+    /*keep the positions to be controlled by this object*/
+    static const int N_MAX_ACT_LEDS = 28;
+    int activeLedPositions[N_MAX_ACT_LEDS];
+    int n_activeLeds; 
     
 public:
-    bool init();
-    bool setColor(unsigned char redColor, unsigned char greenColor, unsigned char blueColor);
-    bool setIntensity(unsigned char intensity);
+    bool init(int activePositions[], int n_activePositions);
+    bool setColor(unsigned char redColor, unsigned char greenColor, unsigned char blueColor, 
+                   CRGB colorBuffer[], int nColors);
+    bool setIntensity(unsigned char intensity,CRGB colorBuffer[], int nColors);
+    bool setColor(CRGB color, CRGB colorBuffer[], int nColors);
 };
